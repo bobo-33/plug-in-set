@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#tab{
+	width: 500px;
+    margin: 200px auto;
+}
+ul{
+	list-style: none;
+	overflow: hidden;
+}
+li{
+	float: left;
+    padding: 0 15px;
+    background: #ebebeb;
+}
+.on{
+	background: orange !important;
+}
+div{
+	padding-left: 40px;
+}
