@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.mark{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				z-index: 100;
+				background: #fff;
+			}
+			.mark-inner{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height:5px;
+				background: #339999;
+			}
+			
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="mark">
+			<div class="mark-inner">
+				
+			</div>
+		</div>
+		<header><img src="http://img3.imgtn.bdimg.com/it/u=1318555598,4259478695&fm=200&gp=0.jpg"/></header>
+		<script type="text/javascript">
+			$('.mark .mark-inner').animate({width:'20%'},100)
+		</script>
+		<section class="banner">
+			<img src="http://img3.imgtn.bdimg.com/it/u=1318555598,4259478695&fm=200&gp=0.jpg"/>
+		</section>
+		<script type="text/javascript">
+			$('.mark .mark-inner').animate({width:'80%'},100)
+		</script>
+		<footer>
+			<img src="http://img3.imgtn.bdimg.com/it/u=1318555598,4259478695&fm=200&gp=0.jpg"/>
+		</footer>
+		<script type="text/javascript">
+			$('.mark .mark-inner').animate({width:'100%'},100,function(){
+				$('.mark').fadeOut();
+			})
+		</script>
+		
+		<!--采用程序从上而下执行特点-->
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.mark{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				z-index: 100;
+				background: #fff;
+			}
+			.mark-inner{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				border: 1px solid red;
+				width: 64px;
+				height: 64px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mark">
+			<div class="mark-inner">
+				<img src="img/loading.gif"/>
+			</div>
+		</div>
+		<img src="http://img3.imgtn.bdimg.com/it/u=1318555598,4259478695&fm=200&gp=0.jpg"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				setTimeout(function(){
+					$('.mark').fadeOut()
+				},3000)
+			})
+		</script>
+	</body>
+</html>
