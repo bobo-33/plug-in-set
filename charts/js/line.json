@@ -1,0 +1,18 @@
+{
+	"status": "success",
+    "status_code": "200",
+	"object":{
+			"labels": ["January", "February", "March", "April", "May", "June", "July"],
+		    "datasets": [
+		    
+		    	{
+				"backgroundColor" : "rgba(255,255,255,0)",
+				"borderColor" : "#CCCCFF",
+				"data" : [65,59,90,81,56,55,40]
+				}
+		    
+		    ]
+		}
+	}
+	
+
