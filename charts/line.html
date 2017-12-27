@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--http://www.mamicode.com/info-detail-1972308.html-----chart.js中文文档-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>hello world</title>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/Chart.js/2.7.1/Chart.min.js"></script>    
+</head>
+<body>
+	
+	<div>
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+	<script>
+	$(function () {
+		var url="js/line.json";
+		var data={};
+		$.get(url,function(res){
+			console.log(res);
+			if(res.status=="success"&&res.status_code=="200"){
+				//console.log(res.object)
+				data=res.object;
+				console.log(data);
+				var ctx = $("#myChart").get(0).getContext("2d");
+			    var myNewChart = new Chart(ctx,{
+			    	type:'line',
+			    	data:data,
+			    	options:{
+			    		title: {
+				            display: true,
+				            fontStyle:'normal',
+				            fontSize:16,
+				            text: 'Custom Chart Title'
+				       },
+				        legend: { //图例相关配置
+				            display: false
+				            
+				        }
+			    	}
+			    });
+			}
+		
+		})
+	});
+</script>
+</body>
+</html>
